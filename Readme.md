@@ -1,27 +1,30 @@
-Unix Shell from Scratch
+# Unix Shell from Scratch
 
-A minimal Unix shell implemented in C using POSIX system calls, replicating core bash functionality such as process execution, background jobs, and signal handling.
+A minimal Unix shell implemented in **C** using **POSIX system calls**, replicating core `bash` functionality such as process execution, background jobs, and signal handling.
 
-Features
+---
 
-Command execution via fork() and execvp()
+## Features
 
-Built-in commands: cd, exit, jobs
+- Command execution via `fork()` and `execvp()`
+- Built-in commands: `cd`, `exit`, `jobs`
+- Background execution using `&`
+- Job tracking and management
+- Signal handling (`Ctrl+C`, `Ctrl+Z`)
+- Error handling for invalid commands
 
-Background execution using &
+---
 
-Job tracking and management
+## Usage
 
-Signal handling (Ctrl+C, Ctrl+Z)
-
-Error handling for invalid commands
-
-Usage
-
+### Build
+```bash
 make
+
+Run
 ./myshell
 
-
+Example
 myshell> ls
 myshell> cd ..
 myshell> sleep 5 &
@@ -41,4 +44,5 @@ Tech Stack
 C · POSIX APIs · Unix/Linux
 
 Author
+
 Mannat Raj Singh
